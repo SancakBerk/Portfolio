@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-function navbar() {
+function Navbar() {
   const [responsive, setResponsive] = useState(false);
   const [exitAnimation, setExitAnimation] = useState(false);
 
@@ -45,7 +45,7 @@ function navbar() {
               </button>
             </div>
           ) : (
-            ''
+            <div></div>
           )}
           <a href="#aboutid">
             <h1 className="text-xl text-white p-2 m-2 font-semibold ">About</h1>
@@ -69,31 +69,8 @@ function navbar() {
           <h1>X</h1>
         </button>
       </div>
-
-      {/* <div
-        className={`w-auto h-auto  flex-row p-2 items-start justify-center z-20  hidden animasyonkullan ${
-          responsive
-            ? 'flex  w-full h-auto  flex-col justify-center items-center bg-black max-sm:flex '
-            : 'hidden'
-        }`}
-      >
-        <a href="#aboutid">
-          <h1 className="text-xl text-white p-2 m-2 font-semibold ">About</h1>
-        </a>
-        <a href="#whatido">
-          <h1 className="text-xl text-white p-2 m-2 font-semibold">
-            What I Do
-          </h1>
-        </a>
-        <a href="#Portfolioid">
-          <h1 className="text-xl text-white p-2 m-2 font-semibold">Work</h1>
-        </a>
-        <a href="#contactme">
-          <h1 className="text-xl text-white p-2 m-2 font-semibold">Contact</h1>
-        </a>
-      </div> */}
     </div>
   );
 }
 
-export default navbar;
+export default Navbar;
