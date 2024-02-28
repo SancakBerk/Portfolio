@@ -28,7 +28,10 @@ function Aboutme() {
             command of the Bloc architecture, ensuring efficient state
             management and robust application logic in my projects.. You can
             find more details about me and explore the projects I&apos;ve
-            developed on my GitHub profile: My GitHub Profile.
+            developed on my GitHub profile:{' '}
+            <a href="https://github.com/SancakBerk" target="_blank">
+              Click
+            </a>
           </p>
           <p className="text-[#B0ADAD] text-base m-4 max-sm:text-xs text-justify ">
             On the backend side, I prefer MySQL as the database and leverage
