@@ -96,11 +96,13 @@ function Aboutme() {
             <div className="bg-[#292C36] w-full h-auto rounded-s-md flex flex-col items-center   max-lg:w-full ">
               <Link
                 href={'https://book-web-two.vercel.app/'}
+                target="_blank"
                 className=" LatestPojects1 bg-contain bg-center h-[250px] w-full bg-no-repeat  hover:scale-105 object-cover  "
               />
               <h3 className="m-3 ">Libary</h3>
               <Link
                 href={'https://book-web-two.vercel.app/'}
+                target="_blank"
                 className="bg-[#558FFF] px-4 py-2 rounded-md mx-3 "
               >
                 View
@@ -112,11 +114,13 @@ function Aboutme() {
             <div className="bg-[#292C36] w-full h-[406px] max-lg rounded-s-md flex flex-col items-center p-4">
               <Link
                 href={'https://sancakberk.github.io/'}
+                target="_blank"
                 className=" LatestProjects2 bg-contain bg-center h-[250px] w-full bg-no-repeat hover:scale-105 object-cover  "
               />
               <h3 className="m-3 ">Cafe Street Web Develope</h3>
               <Link
                 className="bg-[#558FFF] px-4 py-2 rounded-md mx-3 "
+                target="_blank"
                 href={'https://sancakberk.github.io/'}
               >
                 View
