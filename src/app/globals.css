@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition: 1s;
+  color: white;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+.centerbackground {
+  background-size: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.HeaderBackgroundImage {
+  width: 100%;
+  background-image: url('../app/Images/banner.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+.darker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.AboutMeBackgroundImage {
+  background-image: url('../app/Images/LaptopImage.png');
+}
+.WhatIdofirst {
+  background-image: url('../app/Images/web-development\ 1.jpg');
+}
+.WhatIdosecond {
+  background-image: url('../app/Images/ui-design\ 1.jpg');
+}
+.LatestPojects1 {
+  background-image: url('../app/Images/Book.png');
+}
+.LatestProjects2 {
+  background-image: url('../app/Images/emlak.png');
+}
+.LatestProjects3 {
+  background-image: url('../app/Images/anket.jpg');
+}
+@keyframes animasyoon {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animasyonkullan {
+  animation-name: animasyoon;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  overflow: hidden;
+}
+
+@keyframes cikisanimasyon {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+.cikisanimasyon {
+  animation-name: cikisanimasyon;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
