@@ -11,7 +11,7 @@ function Aboutme() {
       {/* FİRST ABOUT ME PİECE */}
       <div className="w-3/4 flex  justify-center items-center max-sm:flex-col ">
         <div className="  centerbackground  w-1/2 h-auto max-sm:w-full  relative  z-50 bg-[#212121] ">
-          <Image src={laptop} className="w-full h-auto" />
+          <Image src={laptop} alt="laptop" className="w-full h-auto" />
           <div className="absolute top-5 left-5 w-full h-full  border border-white rounded-t-md rounded-b-md -z-10 "></div>
         </div>
         <div className="flex flex-col p-6 w-1/2 justify-center items-center   max-sm:w-full">
