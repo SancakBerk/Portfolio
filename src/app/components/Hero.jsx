@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import LinkedIn from '../Images/LinkedIn.png';
 import Github from '../Images/Github.jpg';
-import Navbar from './Navbar';
+import Navbar from '@/app/components/navbar';
 
 function Banner() {
   return (
