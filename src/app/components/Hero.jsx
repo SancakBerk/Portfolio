@@ -11,7 +11,7 @@ function Banner() {
 
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'Berk Sancak Resume';
+    link.download = 'Berk_Sancak_Resume';
     link.click();
   };
 
