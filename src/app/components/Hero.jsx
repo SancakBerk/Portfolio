@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import LinkedIn from '../Images/LinkedIn.png';
@@ -5,6 +6,15 @@ import Github from '../Images/Github.jpg';
 import Navbar from '@/app/components/navbar';
 
 function Banner() {
+  const handleDownload = () => {
+    const pdfUrl = '/resume.pdf';
+
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'Berk Sancak Resume';
+    link.click();
+  };
+
   return (
     <main className="HeaderBackgroundImage bg-center w-screen h-auto relative  ">
       <Navbar />
@@ -30,6 +40,13 @@ function Banner() {
               <Image src={Github} className="" alt="Github" />
             </a>
           </div>
+          <button
+            onClick={handleDownload}
+            className="bg-[#5a6272]  p-2 rounded-md mx-3 my-4 hover:bg-blue-900"
+            id="Resume"
+          >
+            Click For Resume
+          </button>
         </div>
       </div>
     </main>

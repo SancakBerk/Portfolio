@@ -14,14 +14,14 @@ function Aboutme() {
           <Image src={laptop} alt="laptop" className="w-full h-auto" />
           <div className="absolute top-5 left-5 w-full h-full  border border-white rounded-t-md rounded-b-md -z-10 "></div>
         </div>
-        <div className="flex flex-col p-6 w-1/2 justify-center items-center   max-sm:w-full">
+        <div className="flex flex-col p-6 w-1/2 justify-center items-center   max-sm:w-full max-sm:p-0 max-sm:mt-3">
           <h3 className="text-[#4C70EF] text-2xl m-2 font-semibold max-sm:text-xl ">
             About Me
           </h3>
           <h1 className="font-semibold text-4xl text-white m-2 max-[300px]:text-xs max-sm:text-xs max-md:text-3xl    ">
             I&apos;m Berk Sancak
           </h1>
-          <p className="text-[#B0ADAD] text-base m-4 max-sm:text-xs text-justify ">
+          <p className="text-[#B0ADAD] text-base m-4 max-sm:text-s text-justify ">
             Hello! I&apos;m Berk Sancak, a dedicated software developer. I
             specialize in developing web applications using React and Next.js,
             and for mobile applications, I choose Flutter and have a strong
@@ -33,7 +33,7 @@ function Aboutme() {
               Click
             </a>
           </p>
-          <p className="text-[#B0ADAD] text-base m-4 max-sm:text-xs text-justify ">
+          <p className="text-[#B0ADAD] text-base m-4 max-sm:text-s text-justify ">
             On the backend side, I prefer MySQL as the database and leverage
             Node.js to develop APIs, ensuring effective data management. In my
             projects, I focus not only on design but also on enhancing
@@ -57,7 +57,7 @@ function Aboutme() {
         <h1 className="text-4xl font-semibold p-5 text-center max-[300px]:text-2xl ">
           SPECIALIZING IN
         </h1>
-        <div className="flex flex-row w-full p-5 max-sm:flex-col  ">
+        <div className="flex flex-row w-full p-5 max-sm:flex-col  max-sm:p-0  ">
           <div className="w-1/2 flex flex-col bg-[#292C36] p-8 m-2 rounded-xl max-sm:w-full max-md:p-4 ">
             {/*specializingın each box */}
             <div className="flex flex-row items-center ">
@@ -96,7 +96,7 @@ function Aboutme() {
         </h1>
         <div className=" w-full justify-center items-center flex flex-row max-lg:flex-col  max-lg:justify-center  max-lg:items-center p-4 ">
           <div className="w-1/4 h-[400px] flex  m-4  max-lg:w-full  ">
-            <div className="bg-[#292C36] w-full h-auto rounded-s-md flex flex-col items-center   max-lg:w-full ">
+            <div className="bg-[#292C36] w-full h-[406px] max-lg rounded-s-md flex flex-col items-center p-4">
               <Link
                 href={'https://book-web-two.vercel.app/'}
                 target="_blank"
@@ -139,7 +139,12 @@ function Aboutme() {
                 className="bg-[#373d4a] px-4 py-2 rounded-md mx-3 cursor-pointer  "
                 disabled
               >
-                Contact Me
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/berk-sancak-5086a2258/"
+                >
+                  Contact Me
+                </Link>
               </button>
             </div>
           </div>
