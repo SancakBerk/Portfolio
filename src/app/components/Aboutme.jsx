@@ -29,7 +29,11 @@ function Aboutme() {
             management and robust application logic in my projects.. You can
             find more details about me and explore the projects I&apos;ve
             developed on my GitHub profile:{' '}
-            <a href="https://github.com/SancakBerk" target="_blank">
+            <a
+              href="https://github.com/SancakBerk"
+              target="_blank"
+              className="text-blue-500"
+            >
               Click
             </a>
           </p>
@@ -66,9 +70,19 @@ function Aboutme() {
                 Web development
               </h3>
             </div>
+            <p className="text-sm max-[300px]:text-xs text-justify">-React</p>
             <p className="text-sm max-[300px]:text-xs text-justify">
-              I focus on creating captivating and user-friendly interfaces using
-              technologies like React, Next.js, and Tailwind CSS.
+              -Redux Toolkit
+            </p>
+            <p className="text-sm max-[300px]:text-xs text-justify">-Nextjs</p>
+            <p className="text-sm max-[300px]:text-xs text-justify">
+              -Tailwind Css
+            </p>
+            <p className="text-sm max-[300px]:text-xs text-justify">
+              -Nodejs, Nest.js
+            </p>
+            <p className="text-sm max-[300px]:text-xs text-justify">
+              -Sql, Firebase
             </p>
           </div>
 
@@ -81,9 +95,10 @@ function Aboutme() {
               </h3>
             </div>
             <p className="text-sm max-[300px]:text-xs justify-normal text-justify ">
-              I specialize in mobile development using Flutter and have a strong
-              command of the Bloc architecture, ensuring efficient state
-              management and robust application logic in my projects.
+              -Flutter
+            </p>
+            <p className="text-sm max-[300px]:text-xs justify-normal text-justify ">
+              -Bloc architecture
             </p>
           </div>
         </div>
@@ -113,7 +128,7 @@ function Aboutme() {
             </div>
           </div>
 
-          <div className="w-1/4 h-[400px] flex  m-4  max-lg:w-full  ">
+          {/* <div className="w-1/4 h-[400px] flex  m-4  max-lg:w-full  ">
             <div className="bg-[#292C36] w-full h-[406px] max-lg rounded-s-md flex flex-col items-center p-4">
               <Link
                 href={'https://sancakberk.github.io/'}
@@ -129,12 +144,12 @@ function Aboutme() {
                 View
               </Link>
             </div>
-          </div>
+          </div> */}
 
           <div className="w-1/4 h-[400px] flex  m-4  max-lg:w-full  ">
             <div className="bg-[#292C36] w-full h-[406px] rounded-s-md flex flex-col  cursor-pointer  items-center p-4 ">
               <div className=" LatestProjects3 bg-contain bg-center h-[250px] w-full bg-no-repeat  hover:scale-105 object-cover " />
-              <h3 className="m-3 ">Travel App Develope</h3>
+              <h3 className="m-3 ">Freelance Special WEB-MOBİLE App </h3>
               <button
                 className="bg-[#373d4a] px-4 py-2 rounded-md mx-3 cursor-pointer  "
                 disabled
