@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import React from 'react';
-import Image from 'next/image';
-import laptop from '@/app/Images/LaptopImage.png';
+import Link from "next/link";
+import React from "react";
+import Image from "next/image";
+import laptop from "@/app/Images/LaptopImage.png";
 function Aboutme() {
   return (
     <div
@@ -28,7 +28,7 @@ function Aboutme() {
             command of the Bloc architecture, ensuring efficient state
             management and robust application logic in my projects.. You can
             find more details about me and explore the projects I&apos;ve
-            developed on my GitHub profile:{' '}
+            developed on my GitHub profile:{" "}
             <a
               href="https://github.com/SancakBerk"
               target="_blank"
@@ -62,7 +62,7 @@ function Aboutme() {
           SPECIALIZING IN
         </h1>
         <div className="flex flex-row w-full p-5 max-sm:flex-col  max-sm:p-0  ">
-          <div className="w-1/2 flex flex-col bg-[#292C36] p-8 m-2 rounded-xl max-sm:w-full max-md:p-4 ">
+          <div className="w-1/2 flex flex-col bg-[#292C36] p-8 m-2 rounded-xl max-sm:w-full max-md:p-4 gap-2 ">
             {/*specializingın each box */}
             <div className="flex flex-row items-center ">
               <div className="WhatIdofirst  w-[42px] h-[42px] p-4  m-2  bg-[#38405A] rounded-lg" />
@@ -71,9 +71,7 @@ function Aboutme() {
               </h3>
             </div>
             <p className="text-sm max-[300px]:text-xs text-justify">-React</p>
-            <p className="text-sm max-[300px]:text-xs text-justify">
-              -Redux Toolkit
-            </p>
+
             <p className="text-sm max-[300px]:text-xs text-justify">-Nextjs</p>
             <p className="text-sm max-[300px]:text-xs text-justify">
               -Tailwind Css
@@ -82,11 +80,14 @@ function Aboutme() {
               -Nodejs, Nest.js
             </p>
             <p className="text-sm max-[300px]:text-xs text-justify">
+              -Redux Toolkit
+            </p>
+            <p className="text-sm max-[300px]:text-xs text-justify">
               -Sql, Firebase
             </p>
           </div>
 
-          <div className="w-1/2 flex flex-col bg-[#292C36] p-8 m-2 rounded-xl max-sm:w-full max-[300px]:text-sm max-[300px]:p-4 ">
+          <div className="w-1/2 flex flex-col bg-[#292C36] p-8 m-2 rounded-xl max-sm:w-full max-[300px]:text-sm max-[300px]:p-4 gap-2 ">
             {/*specializingın each box */}
             <div className="flex flex-row items-center  ">
               <div className="WhatIdosecond  w-[42px] h-[42px] p-3 m-3   bg-[#38405A] rounded-lg" />
@@ -113,15 +114,15 @@ function Aboutme() {
           <div className="w-1/4 h-[400px] flex  m-4  max-lg:w-full  ">
             <div className="bg-[#292C36] w-full h-[406px] max-lg rounded-s-md flex flex-col items-center p-4">
               <Link
-                href={'https://book-web-two.vercel.app/'}
+                href={"https://book-web-two.vercel.app/"}
                 target="_blank"
-                className=" LatestPojects1 bg-contain bg-center h-[250px] w-full bg-no-repeat  hover:scale-105 object-cover  "
+                className=" LatestPojects1 bg-contain bg-center h-[250px] w-full bg-no-repeat hover:scale-105  object-cover  "
               />
               <h3 className="m-3 ">Libary</h3>
               <Link
-                href={'https://book-web-two.vercel.app/'}
+                href={"https://book-web-two.vercel.app/"}
                 target="_blank"
-                className="bg-[#558FFF] px-4 py-2 rounded-md mx-3 "
+                className="bg-[#558FFF] px-4 py-2 rounded-md mx-3  "
               >
                 View
               </Link>
@@ -150,6 +151,23 @@ function Aboutme() {
             <div className="bg-[#292C36] w-full h-[406px] rounded-s-md flex flex-col  cursor-pointer  items-center p-4 ">
               <div className=" LatestProjects3 bg-contain bg-center h-[250px] w-full bg-no-repeat  hover:scale-105 object-cover " />
               <h3 className="m-3 ">Freelance Special WEB-MOBİLE App </h3>
+              <button
+                className="bg-[#373d4a] px-4 py-2 rounded-md mx-3 cursor-pointer  "
+                disabled
+              >
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/berk-sancak-5086a2258/"
+                >
+                  Contact Me
+                </Link>
+              </button>
+            </div>
+          </div>
+          <div className="w-1/4 h-[400px] flex  m-4  max-lg:w-full  ">
+            <div className="bg-[#292C36] w-full h-[406px] rounded-s-md flex flex-col  cursor-pointer  items-center p-4 ">
+              <div className=" LatestProjects4 bg-contain bg-center h-[250px] w-full bg-no-repeat  hover:scale-105 object-cover " />
+              <h3 className="m-3 ">Personal Expense Saving Tracker Page </h3>
               <button
                 className="bg-[#373d4a] px-4 py-2 rounded-md mx-3 cursor-pointer  "
                 disabled

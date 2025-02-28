@@ -1,5 +1,5 @@
-'use client';
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 function Navbar() {
   const [responsive, setResponsive] = useState(false);
   const [exitAnimation, setExitAnimation] = useState(false);
@@ -17,7 +17,7 @@ function Navbar() {
     }
   };
   return (
-    <div className="w-full h-auto p-4 flex flex-col  items-center justify-between relative  ">
+    <div className="w-full h-auto p-4 flex flex-col  items-center justify-between relative   ">
       <div className="w-full h-auto flex flex-row justify-between items-center">
         {/* NAVBAR LEFT SİDE BERK */}
         <div className="z-20 ">
@@ -29,10 +29,10 @@ function Navbar() {
         <div
           className={`w-auto h-auto flex flex-row p-2 items-start justify-center z-20   ${
             responsive
-              ? ' max-sm:flex  absolute top-0 left-0 right-0  w-full h-96 flex flex-col justify-center items-center bg-[#212121] z-30 animasyonkullan '
-              : 'max-sm:hidden'
+              ? " max-sm:flex  absolute top-0 left-0 right-0  w-full h-96 flex flex-col justify-center items-center bg-[#212121] z-30 animasyonkullan "
+              : "max-sm:hidden"
           } 
-          ${exitAnimation ? 'cikisanimasyon' : ''}
+          ${exitAnimation ? "cikisanimasyon" : ""}
        `}
         >
           {responsive ? (

@@ -15,7 +15,7 @@
 }
 .HeaderBackgroundImage {
   width: 100%;
-  background-image: url('../app/Images/banner.jpeg');
+  background-image: url("../app/Images/banner.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
@@ -29,22 +29,25 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 .AboutMeBackgroundImage {
-  background-image: url('../app/Images/LaptopImage.png');
+  background-image: url("../app/Images/LaptopImage.png");
 }
 .WhatIdofirst {
-  background-image: url('../app/Images/web-development\ 1.jpg');
+  background-image: url("../app/Images/web-development\ 1.jpg");
 }
 .WhatIdosecond {
-  background-image: url('../app/Images/ui-design\ 1.jpg');
+  background-image: url("../app/Images/ui-design\ 1.jpg");
 }
 .LatestPojects1 {
-  background-image: url('../app/Images/Book.png');
+  background-image: url("../app/Images/Book.png");
 }
 .LatestProjects2 {
-  background-image: url('../app/Images/emlak.png');
+  background-image: url("../app/Images/emlak.png");
 }
 .LatestProjects3 {
-  background-image: url('../app/Images/Freelance.png');
+  background-image: url("../app/Images/Freelance.png");
+}
+.LatestProjects4 {
+  background-image: url("../app/Images/PersonalExpenseTrackerPage.png");
 }
 @keyframes animasyoon {
   from {
