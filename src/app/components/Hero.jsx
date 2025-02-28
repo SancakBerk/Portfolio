@@ -4,6 +4,7 @@ import Image from "next/image";
 import LinkedIn from "../Images/LinkedIn.png";
 import Github from "../Images/Github.jpg";
 import Navbar from "@/app/components/navbar";
+import ProfileImage from "../Images/ProfileImage.png";
 
 function Banner() {
   const handleDownload = () => {
@@ -17,12 +18,12 @@ function Banner() {
 
   return (
     <main className="HeaderBackgroundImage bg-center w-screen h-screen relative  ">
-      <div className="absolute w-full h-full bg-black opacity-50"></div>
+      <div className="absolute w-full h-full bg-black opacity-70"></div>
+
       <Navbar />
 
-      <div className=" relative w-full h-[694px] text-center flex justify-center items-center flex-col ">
-        <div className="absolute w-full h-screen "></div>
-        <div className="w-1/2 h-auto z-20 text-white">
+      <div className=" relative w-full h-[694px] text-center flex justify-center items-center gap-28 max-sm:flex-col  ">
+        <div className="w-auto h-auto z-20 text-white">
           <h1 className="text-[64px] max-[300px]:text-4xl max-[300px]:my-5 max-sm:text-4xl ">
             I&apos;m Berk Sancak
           </h1>
@@ -48,6 +49,14 @@ function Banner() {
           >
             Click For Resume
           </button>
+        </div>
+        <div>
+          <Image
+            src={ProfileImage}
+            height={200}
+            width={200}
+            className=" rounded-full "
+          />
         </div>
       </div>
     </main>
