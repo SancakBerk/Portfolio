@@ -5,11 +5,11 @@ import laptop from "@/app/Images/LaptopImage.png";
 function Aboutme() {
   return (
     <div
-      className="w-screen h-auto  bg-[#212121] flex flex-col items-center pt-20 "
+      className="w-screen h-auto  bg-[#212121] flex flex-col items-center pt-20  "
       id="aboutid"
     >
       {/* FİRST ABOUT ME PİECE */}
-      <div className="w-3/4 flex  justify-center items-center max-sm:flex-col ">
+      <div className="w-3/4 flex  justify-center items-center max-sm:flex-col appearScale ">
         <div className="  centerbackground  w-1/2 h-auto max-sm:w-full  relative  z-50 bg-[#212121] ">
           <Image src={laptop} alt="laptop" className="w-full h-auto" />
           <div className="absolute top-5 left-5 w-full h-full  border border-white rounded-t-md rounded-b-md -z-10 "></div>
@@ -52,7 +52,7 @@ function Aboutme() {
         </div>
       </div>
       <div
-        className="w-3/4 h-auto p-10 flex flex-col items-center justify-center my-8 max-sm:p-0 "
+        className="w-3/4 h-auto p-10 flex flex-col items-center justify-center my-8 max-sm:p-0 appearTransformX "
         id="whatido"
       >
         <h3 className="text-[#4C70EF] text-2xl font-semibold  tracking-wider p-5 max-[300px]:p-2 ">
@@ -105,9 +105,12 @@ function Aboutme() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center w-full" id="Portfolioid">
+      <div
+        className="flex flex-col items-center w-full  appearScale  "
+        id="Portfolioid"
+      >
         <h3 className="text-[#4C70EF] text-2xl m-2 font-semibold">Portfolio</h3>
-        <h1 className="font-semibold text-4xl text-white m-2 max-[300px]:text-2xl ">
+        <h1 className="font-semibold text-4xl text-white m-2 max-[300px]:text-2xl  ">
           Latest Projects
         </h1>
         <div className=" w-full justify-center items-center flex flex-row max-lg:flex-col  max-lg:justify-center  max-lg:items-center p-4 ">

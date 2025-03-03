@@ -22,8 +22,8 @@ function Banner() {
 
       <Navbar />
 
-      <div className=" relative w-full h-[694px] text-center flex justify-center items-center gap-28 max-sm:flex-col  ">
-        <div className="w-auto h-auto z-20 text-white">
+      <div className=" relative w-full h-[694px] text-center flex justify-center items-center gap-28 max-sm:flex-col   ">
+        <div className="w-auto h-auto z-20 text-white   ">
           <h1 className="text-[64px] max-[300px]:text-4xl max-[300px]:my-5 max-sm:text-4xl ">
             I&apos;m Berk Sancak
           </h1>
@@ -50,12 +50,12 @@ function Banner() {
             Click For Resume
           </button>
         </div>
-        <div>
+        <div className="   ">
           <Image
             src={ProfileImage}
             height={200}
             width={200}
-            className=" rounded-full "
+            className=" rounded-[20%]     "
           />
         </div>
       </div>

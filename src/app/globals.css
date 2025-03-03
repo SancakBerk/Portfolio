@@ -82,3 +82,37 @@
   animation-duration: 1s;
   animation-timing-function: ease;
 }
+
+.appearTransformX {
+  animation-name: appearAnimationTransformX;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes appearAnimationTransformX {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.appearScale {
+  animation-name: appearAnimationScale;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes appearAnimationScale {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
