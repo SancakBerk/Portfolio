@@ -67,7 +67,7 @@ function Aboutme() {
             <div className="flex flex-row items-center ">
               <div className="WhatIdofirst  w-[42px] h-[42px] p-4  m-2  bg-[#38405A] rounded-lg" />
               <h3 className="text-2xl w-[220px] m-2 max-sm:text-xl max-md:text-lg max-[300px]:text-xs">
-                Web development
+                Front End Development
               </h3>
             </div>
             <p className="text-sm max-[300px]:text-xs text-justify">-React</p>
@@ -77,13 +77,10 @@ function Aboutme() {
               -Tailwind Css
             </p>
             <p className="text-sm max-[300px]:text-xs text-justify">
-              -Nodejs, Nest.js
-            </p>
-            <p className="text-sm max-[300px]:text-xs text-justify">
               -Redux Toolkit
             </p>
             <p className="text-sm max-[300px]:text-xs text-justify">
-              -Sql, Firebase
+              -Framer Motion
             </p>
           </div>
 
@@ -92,14 +89,14 @@ function Aboutme() {
             <div className="flex flex-row items-center  ">
               <div className="WhatIdosecond  w-[42px] h-[42px] p-3 m-3   bg-[#38405A] rounded-lg" />
               <h3 className="text-2xl w-[220px] m-2 max-sm:text-sm max-md:text-lg max-[300px]:text-xs ">
-                Mobile App Developement
+                Backend Development
               </h3>
             </div>
             <p className="text-sm max-[300px]:text-xs justify-normal text-justify ">
-              -Flutter
+              -Nodejs, Nest.js
             </p>
-            <p className="text-sm max-[300px]:text-xs justify-normal text-justify ">
-              -Bloc architecture
+            <p className="text-sm max-[300px]:text-xs text-justify">
+              -Sql, Firebase
             </p>
           </div>
         </div>

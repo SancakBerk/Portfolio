@@ -5,6 +5,7 @@ import LinkedIn from "../Images/LinkedIn.png";
 import Github from "../Images/Github.jpg";
 import Navbar from "@/app/components/navbar";
 import ProfileImage from "../Images/ProfileImage.png";
+import { motion } from "framer-motion";
 
 function Banner() {
   const handleDownload = () => {
@@ -42,22 +43,25 @@ function Banner() {
               <Image src={Github} className="" alt="Github" />
             </a>
           </div>
-          <button
+          <motion.button
+            whileTap={{ scale: 0.1, transformOrigin: "center" }}
+            whileHover={{ backgroundColor: "#00007B" }}
             onClick={handleDownload}
-            className="bg-[#5a6272]  p-2 rounded-md mx-3 my-4 hover:bg-blue-900"
+            className="bg-[#5a6272]  p-2 rounded-md mx-3 my-4 "
             id="Resume"
           >
             Click For Resume
-          </button>
+          </motion.button>
         </div>
-        <div className="   ">
+        <motion.div drag>
           <Image
             src={ProfileImage}
             height={200}
             width={200}
+            draggable="false"
             className=" rounded-[20%]     "
           />
-        </div>
+        </motion.div>
       </div>
     </main>
   );
