@@ -8,6 +8,9 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 .centerbackground {
   background-size: center;
   background-repeat: no-repeat;

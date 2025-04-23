@@ -4,7 +4,7 @@ import Aboutme from "./components/Aboutme";
 import Logo from "./components/Logo";
 export default function Home() {
   return (
-    <main className="relative h-full w-screen">
+    <main className="relative h-full w-screen  ">
       <Hero />
       <Aboutme />
       <Logo />

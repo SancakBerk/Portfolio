@@ -5,7 +5,7 @@ import laptop from "@/app/Images/LaptopImage.png";
 function Aboutme() {
   return (
     <div
-      className="w-screen h-auto  bg-[#212121] flex flex-col items-center pt-20  "
+      className="w-screen h-auto  bg-[#212121] flex flex-col items-center pt-20    "
       id="aboutid"
     >
       {/* FİRST ABOUT ME PİECE */}
