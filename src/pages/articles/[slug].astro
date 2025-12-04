@@ -1,0 +1,82 @@
+---
+import { Layout } from "../../layouts";
+import { articles } from "../../constants/cv-data";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const { articles } = await import("../../constants/cv-data");
+  
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+---
+
+<Layout>
+  <section class="w-full min-h-screen px-6 py-4 pt-14 pb-40 md:pb-64 bg-background">
+    <div class="w-full max-w-[1700px]  mx-auto py-16">
+      <a href="/articles" class="text-xs text-primary underline mb-6 inline-block">
+        ← Back to articles
+      </a>
+
+      <header class="mb-6 flex flex-col gap-2">
+        <h1 class="text-3xl md:text-4xl font-ubuntu font-semibold">
+          {article.title}
+        </h1>
+
+        <div class="flex flex-wrap items-center gap-3 text-xs text-mutedForeground">
+          <span>{article.date}</span>
+          {article.readingTime && <span>· {article.readingTime}</span>}
+        </div>
+
+        {article.tags && (
+          <div class="mt-2 flex flex-wrap gap-2 text-[11px] text-mutedForeground">
+            {article.tags.map((tag) => (
+              <span class="px-2 py-1 rounded-full border border-primaryLiteAlt/60 bg-skillGradientAlt/40">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      <div class="mt-4 grid gap-10 lg:grid-cols-[minmax(0,2.2fr)_minmax(0,3fr)] items-start">
+        <article class="prose prose-invert max-w-none text-sm md:text-base leading-relaxed whitespace-pre-line">
+          {article.content}
+        </article>
+
+        {article.codeExamples && article.codeExamples.length > 0 && (
+          <aside class="bg-surface border border-primaryLiteAlt/40 rounded-xl p-4 md:p-5 shadow-md shadow-primary/10 lg:sticky lg:top-28 h-fit space-y-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-mutedForeground mb-1">
+                Code Example
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2  gap-4">
+              {article.codeExamples.map((codeExample, index) => (
+                <div class="bg-[#050505]/80 rounded-lg border border-primaryLiteAlt/30 overflow-hidden">
+                  <div class="flex items-center gap-1 px-3 py-2 border-b border-primaryLiteAlt/20 text-[10px] text-mutedForeground uppercase tracking-[0.16em]">
+                    <span class="w-2 h-2 rounded-full bg-red-500/80"></span>
+                    <span class="w-2 h-2 rounded-full bg-yellow-500/80"></span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-500/80"></span>
+                    <span class="ml-2">JavaScript Snippet {index + 1}</span>
+                  </div>
+
+                  <pre class="text-[11px] md:text-xs leading-relaxed overflow-x-auto p-3 md:p-4">
+                    <code>{codeExample}</code>
+                  </pre>
+                </div>
+              ))}
+            </div>
+          </aside>
+        )}
+      </div>
+
+    </div>
+  </section>
+</Layout>

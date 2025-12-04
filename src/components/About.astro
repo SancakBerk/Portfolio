@@ -1,0 +1,62 @@
+---
+import { SectionTitle } from "./UI";
+import { personalInfo, summary } from "../constants/cv-data";
+---
+
+<section id="about" class="w-full min-h-screen px-6 py-4 pt-14 bg-background">
+    <SectionTitle
+        title="About Me"
+        color="primary"
+        className="h-screen flex flex-col justify-center"
+    >
+        <div class="flex_center flex-col lg:flex-row w-full h-full py-10 gap-8">
+            <img
+                src="/berk-sancak-photo.jpeg"
+                alt="Berk Sancak"
+                class="Fade_Up rounded-full lg:mx-14"
+                width="225"
+                height="225"
+                loading="lazy"
+            />
+
+            <div
+                class="Fade_Up w-full md:w-[80%] lg:w-[60%] flex justify-center items-start flex-col gap-4 lg:border-l border-primary py-8 lg:pl-10"
+            >
+                <h2 class="Fade_Up text-[1.5em] font-bold">{summary.title} 👋🏻</h2>
+                <p class="Fade_Up text-justify">
+                    {summary.description}
+                </p>
+                <p class="Fade_Up text-justify">
+                    <strong>Technologies I Work With:</strong>
+                </p>
+                <div class="Fade_Up text-justify">
+                    <p><strong>Front-End:</strong> {summary.technologies.frontend.join(", ")}</p>
+                    <p><strong>Back-End:</strong> {summary.technologies.backend.join(", ")}</p>
+                    <p><strong>Database:</strong> {summary.technologies.database.join(", ")}</p>
+                    <p><strong>State Management:</strong> {summary.technologies.stateManagement.join(", ")}</p>
+                    <p><strong>Version Control & Deployment:</strong> {summary.technologies.versionControl.join(", ")}</p>
+                </div>
+                <p class="Fade_Up text-justify">
+                    <strong>What I Do:</strong>
+                </p>
+                <ul class="Fade_Up list-disc list-inside text-justify">
+                    {summary.whatIDo.map(item => <li>{item}</li>)}
+                </ul>
+                <p class="Fade_Up text-justify">
+                    Feel free to explore my GitHub profile to view my projects and gain deeper insights into my technical expertise and development capabilities.
+                </p>
+            </div>
+        </div>
+
+        <!-- <picture class="flex_center">
+            <source
+                media="(prefers-color-scheme: dark)"
+                srcset="https://raw.githubusercontent.com/ChiragChrg/ChiragChrg/output/github-contribution-grid-snake-dark.svg"
+            />
+            <img
+                alt="github contribution grid snake animation"
+                src="https://raw.githubusercontent.com/ChiragChrg/ChiragChrg/output/github-contribution-grid-snake.svg"
+            />
+        </picture> -->
+    </SectionTitle>
+</section>

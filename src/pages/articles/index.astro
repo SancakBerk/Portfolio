@@ -1,0 +1,66 @@
+---
+import { Layout } from "../../layouts";
+import { articles } from "../../constants/cv-data";
+---
+
+<Layout>
+  <section class="w-full min-h-screen px-6 py-4 pt-14 bg-background">
+    <div class="w-full max-w-4xl mx-auto py-16">
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-ubuntu font-semibold mb-4">
+          Personal Articles
+        </h1>
+        <p class="text-mutedForeground text-lg">
+          Thoughts, experiences, and insights from my journey as a software developer.
+        </p>
+      </header>
+
+      <div class="space-y-8">
+        {articles.map((article) => (
+          <article class="border border-primaryLiteAlt/20 rounded-lg p-6 hover:border-primaryLiteAlt/40 transition-colors">
+            <header class="mb-4">
+              <h2 class="text-xl md:text-2xl font-ubuntu font-semibold mb-2">
+                <a 
+                  href={`/articles/${article.slug}`} 
+                  class="text-primary hover:text-primaryLite transition-colors"
+                >
+                  {article.title}
+                </a>
+              </h2>
+              
+              <div class="flex flex-wrap items-center gap-3 text-xs text-mutedForeground mb-3">
+                <span>{new Date(article.date).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}</span>
+                {article.readingTime && <span>· {article.readingTime}</span>}
+              </div>
+
+              {article.tags && (
+                <div class="flex flex-wrap gap-2 text-[11px] text-mutedForeground mb-3">
+                  {article.tags.map((tag) => (
+                    <span class="px-2 py-1 rounded-full border border-primaryLiteAlt/60 bg-skillGradientAlt/40">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </header>
+
+            <p class="text-mutedForeground leading-relaxed mb-4">
+              {article.excerpt}
+            </p>
+
+            <a 
+              href={`/articles/${article.slug}`}
+              class="text-sm text-primary hover:text-primaryLite underline transition-colors"
+            >
+              Read more →
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,100 @@
+---
+import { SectionTitle } from "./UI";
+import { experience } from "../constants/cv-data";
+import { ExperienceProjects } from "./Preact";
+import { Image } from "astro:assets";
+import { NodeIcon, MongoIcon, NextIcon, ReactIcon, TailwindIcon, MysqlIcon, FirebaseIcon, GoogleCloudIcon, NestJsIcon, ReduxIcon, IISIcon } from "../assets/Icons";
+
+const techIconMap = [
+    { key: "Node.js", icon: NodeIcon },
+    { key: "MongoDB", icon: MongoIcon },
+    { key: "Next.js", icon: NextIcon },
+    { key: "React", icon: ReactIcon },
+    { key: "Tailwind", icon: TailwindIcon },
+    { key: "MS SQL", icon: MysqlIcon },
+    { key: "Firebase", icon: FirebaseIcon },
+    { key: "Google Cloud", icon: GoogleCloudIcon },
+    { key: "Nest.js", icon: NestJsIcon },
+    { key: "Redux Toolkit", icon: ReduxIcon },
+    { key: "IIS", icon: IISIcon },
+];
+
+const getTechIcon = (text: string) => {
+    const found = techIconMap.find((item) => text.includes(item.key));
+    return found?.icon;
+};
+---
+
+<section id="experience" class="w-full min-h-screen px-6 py-4 pt-14 bg-background">
+    <SectionTitle title="Experience" color="secondary">
+        <div class="Fade_Up relative w-full max-w-9xl lg:max-w-10xl mx-auto py-20 px-6 sm:px-8 lg:px-12">
+            <!-- Career timeline vertical line -->
+            <div class="absolute left-8 md:left-1/2 top-8 bottom-8 w-[4px] bg-primary/40 rounded-full pointer-events-none"></div>
+
+            <div class="flex flex-col gap-20">
+                {
+                    experience.map((item, index) => (
+                        <article class="relative flex flex-col lg:flex-row gap-12 lg:gap-16">
+                            <!-- Job info section -->
+                            <div class="flex items-start gap-8 lg:w-[42%] xl:w-[38%]">
+                                <div class="relative flex-shrink-0">
+                                    <!-- Timeline point representing this experience in the career path -->
+                                    <div class="w-10 h-10 rounded-full bg-background border-4 border-primary flex_center z-10 shadow-xl shadow-primary/30"></div>
+                                </div>
+                                <div class="flex flex-col gap-3">
+                                    <h3 class="font-ubuntu text-[1.6em] lg:text-[1.8em] font-semibold">{item.title}</h3>
+                                    <p class="text-xl text-primary font-medium">{item.company}</p>
+                                    <p class="text-base text-mutedForeground">{item.period} {item.location && `• ${item.location}`}</p>
+                                </div>
+                            </div>
+
+                            <!-- Description and projects section -->
+                            <div class="lg:w-[58%] xl:w-[62%] flex flex-col gap-8 pl-20 lg:pl-0">
+                                <div class="flex flex-col xl:flex-row gap-12 xl:gap-16">
+                                    <!-- Job details -->
+                                    <div class="flex-1 flex flex-col gap-6">
+                                        <p class="text-justify text-[1.1em] leading-relaxed">{item.description}</p>
+
+                                        {item.responsibilities && (
+                                            <div class="space-y-3">
+                                                <h4 class="font-semibold text-[1.2em] text-primary">Key Responsibilities:</h4>
+                                                <ul class="list-disc list-inside space-y-3 text-[1em] text-justify">
+                                                    {item.responsibilities.map((res) => (
+                                                        <li class="leading-relaxed">{res}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+
+                                        {item.technologies && item.technologies.length > 0 && (
+                                            <div class="flex flex-wrap gap-4 mt-6">
+                                                {item.technologies.map((tech) => {
+                                                    const icon = getTechIcon(tech);
+                                                    return (
+                                                        <span class="px-4 py-3 rounded-full bg-skillGradientAlt text-[0.9em] border border-primaryLiteAlt flex items-center gap-3">
+                                                            {icon && (
+                                                                <Image src={icon} alt={tech} width={24} height={24} loading="lazy" />
+                                                            )}
+                                                            <span>{tech}</span>
+                                                        </span>
+                                                    );
+                                                })}
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <!-- Projects box -->
+                                    {item.projects && item.projects.length > 0 && (
+                                        <div class="w-full xl:w-[42%] min-w-[380px]">
+                                            <ExperienceProjects client:load projects={item.projects} />
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </SectionTitle>
+</section>

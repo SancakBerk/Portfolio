@@ -1,0 +1,96 @@
+---
+import { Download } from "lucide-preact";
+// import ThemeButton from "./ThemeButton.astro";
+
+const isHome = Astro.url.pathname === "/";
+const sectionHref = (id: string) => (isHome ? `#${id}` : `/#${id}`);
+---
+
+<header id="header" class="hidden lg:block sticky top-0 z-50">
+    <div
+        class="flex justify-between items-center w-full px-6 py-2 bg-headerGradient backdrop-blur-[2px]"
+    >
+        <a href={sectionHref("home")} class="Fade_Down font-satisfy font-bold text-[2em]">
+            <span class="gradientText w-fit">Portfolio.</span>
+        </a>
+
+        <nav class="Header_Nav flex gap-6">
+            <a class="Fade_Down" href={sectionHref("about")}>ABOUT</a>
+            <a class="Fade_Down" href={sectionHref("skills")}>SKILLS</a>
+            <a class="Fade_Down" href={sectionHref("experience")}>EXPERIENCE</a>
+            <a class="Fade_Down" href={sectionHref("projects")}>PROJECTS</a>
+            <a class="Fade_Down" href={sectionHref("contact")}>CONTACT</a>
+            <a class="Fade_Down" href="/articles">ARTICLES</a>
+        </nav>
+
+        <div class="flex_center gap-4">
+            <!-- <ThemeButton className="Fade_Down" /> -->
+
+            <a
+                class="Fade_Down Header_ActionBtn"
+                href="/Berk_Sancak_CV.pdf"
+                target="_blank"
+            >
+                <div class="flex_center gap-2">
+                    <p>Resume</p>
+                    <Download size={18} />
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<script is:inline type="module">
+    const headerElement = document.getElementById("header");
+    // Ana sayfada, classical hash anchor'lar (#section) üzerinden active class hesaplıyoruz
+    const sectionsList = {
+        "#home": document.getElementById("home"),
+        "#about": document.getElementById("about"),
+        "#skills": document.getElementById("skills"),
+        "#experience": document.getElementById("experience"),
+        "#projects": document.getElementById("projects"),
+        "#contact": document.getElementById("contact"),
+    };
+
+    // Set Active class on section scroll
+    const handleScroll = () => {
+        // Sadece ana sayfadayken active class hesapla
+        if (window.location.pathname !== "/") return;
+
+        for (const [linkHref, section] of Object.entries(sectionsList)) {
+            if (!section) continue;
+
+            const rect = section.getBoundingClientRect();
+            const link = document.querySelector(
+                `#header a[href="${linkHref}"]`,
+            );
+
+            if (
+                link &&
+                headerElement &&
+                rect.top <= headerElement.offsetHeight &&
+                rect.bottom >= headerElement.offsetHeight
+            ) {
+                link?.classList.add("active");
+            } else {
+                link?.classList.remove("active");
+            }
+        }
+    };
+
+    function throttle(func, limit) {
+        let throttling = false;
+        return function () {
+            if (!throttling) {
+                func.apply(this, arguments);
+                throttling = true;
+                setTimeout(() => {
+                    throttling = false;
+                }, limit);
+            }
+        };
+    }
+
+    window.addEventListener("scroll", throttle(handleScroll, 100));
+    handleScroll(); // Initial call
+</script>
