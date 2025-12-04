@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.0 (2025-12-04)
+
+* fix: improve experience section responsiveness ([132530c](https://github.com/SancakBerk/LastPortfolio/commit/132530c))
+* Initial commit ([d2eedbf](https://github.com/SancakBerk/LastPortfolio/commit/d2eedbf))
+* LastPortfolio ([0e472d6](https://github.com/SancakBerk/LastPortfolio/commit/0e472d6))
+
 ## <small>1.0.3 (2025-11-16)</small>
 
 * docs: 📚  Update README to include details about nightly build and new features ([79fc2ae](https://github.com/ChiragChrg/Portfolio/commit/79fc2ae))
