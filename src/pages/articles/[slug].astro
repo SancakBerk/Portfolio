@@ -45,8 +45,12 @@ const { article } = Astro.props;
       </header>
 
       <div class="mt-4 grid gap-10 lg:grid-cols-[minmax(0,2.2fr)_minmax(0,3fr)] items-start">
-        <article class="prose prose-invert max-w-none text-sm md:text-base leading-relaxed whitespace-pre-line">
-          {article.content}
+        <article class="max-w-none text-sm md:text-base leading-relaxed space-y-4">
+          {article.content
+            .split("\n\n")
+            .map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
         </article>
 
         {article.codeExamples && article.codeExamples.length > 0 && (
