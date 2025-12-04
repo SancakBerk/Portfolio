@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>1.0.2 (2025-12-04)</small>
+
+* Merge branch 'main' of https://github.com/SancakBerk/LastPortfolio ([9b49a25](https://github.com/SancakBerk/Portfolio/commit/9b49a25))
+* fix: navbar fix ([862c7b4](https://github.com/SancakBerk/Portfolio/commit/862c7b4))
+
 ## <small>1.0.1 (2025-12-04)</small>
 
 * Merge branch 'main' of https://github.com/SancakBerk/LastPortfolio ([1d47067](https://github.com/SancakBerk/Portfolio/commit/1d47067))
