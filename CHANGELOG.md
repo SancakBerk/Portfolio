@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>1.0.1 (2025-12-04)</small>
+
+* Merge branch 'main' of https://github.com/SancakBerk/LastPortfolio ([1d47067](https://github.com/SancakBerk/Portfolio/commit/1d47067))
+* fix: pdfupdate ([80b2f7e](https://github.com/SancakBerk/Portfolio/commit/80b2f7e))
+
 ## 1.0.0 (2025-12-04)
 
 * fix: improve experience section responsiveness ([132530c](https://github.com/SancakBerk/LastPortfolio/commit/132530c))
